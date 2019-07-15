@@ -11,24 +11,35 @@ class CalculatorTest {
 		fail("Not yet implemented");
 	}
 	@Test
-	void FindmaxtestNegative() {
+	void FindmaxtestNegativeNumbers() {
 		Calculator calc = new Calculator();
-		assertEquals(-3,calc.findMax(-3,-5,-7));
+		assertEquals(-1,calc.findMax(-1,-6,-9));
 	}
 	@Test
-	void FindmaxtestPositive() {
+	void FindmaxtestPositiveNumbers() {
 		Calculator calc = new Calculator();
-		assertEquals(3,calc.findMax(3,5,7));
+		// going for failure. 
+		assertEquals(2,calc.findMax(2,9,6));
 	}
 	@Test
-	void FindmaxtestZero() {
+	void FindmaxtestEqualNumbers() {
+		Calculator calc = new Calculator();
+		assertEquals(2,calc.findMax(2,2,2));
+	}
+	@Test
+	void FindmaxtestZeroNumber() {
 		Calculator calc = new Calculator();
 		assertEquals(0,calc.findMax(0,0,0));
 	}
 	@Test
-	void FindmaxtestZero() {
+	void FindmaxtestThreeDigitNumber() {
 		Calculator calc = new Calculator();
-		assertEquals(0,calc.findMax(0,0,0));
+		assertEquals(102,calc.findMax(100,101,102));
+	}
+	@Test
+	void FindmaxtestLargeNumber() {
+		Calculator calc = new Calculator();
+		assertEquals(10000,calc.findMax(100,1000,10000));
 	}
 	
 	
